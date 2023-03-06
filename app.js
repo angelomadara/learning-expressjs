@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded())
 
 app.use('/admin',adminRoutes)
 app.use(shopRoutes)
+// console.log(path.join(process.cwd(),'public/'))
+app.use(express.static(path.join(process.cwd(),'public')));
 
 /**
  * adding 404 page
